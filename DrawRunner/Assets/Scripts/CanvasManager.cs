@@ -23,6 +23,8 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] Transform Player;
     [SerializeField] Transform EndLine;
     [SerializeField] Slider levelProggress;
+
+    private int currentSceneIndex;
     
     
 
@@ -80,6 +82,19 @@ public class CanvasManager : MonoBehaviour
     }
 
     public void LoadNextLevel() {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
         SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ContinueGame() {
+        currentSceneIndex = PlayerPrefs.GetInt("SavedScene");
+        if(currentSceneIndex != 0) {
+            SceneManager.LoadScene (currentSceneIndex);
+        }
+        else { 
+             SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+            
+        }
     }
 }

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     public bool isgrounded;
 
-
+    
     void Start() {
         anim = GetComponent<Animator>();
         speed = 0;
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
          
         }
     }
+    
     
     public void EndGame() {
         speed = 0f;
@@ -42,19 +43,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision theCollision) {
-     if (theCollision.gameObject.name == "Ground") {
-
-         isgrounded = true;
-        }
-    }
- 
-    void OnCollisionExit(Collision theCollision){
-     if (theCollision.gameObject.name == "Ground") {
-         isgrounded = false;
-         Debug.Log("NotGround");
-        }
-    }
+    
+    
 
 
     

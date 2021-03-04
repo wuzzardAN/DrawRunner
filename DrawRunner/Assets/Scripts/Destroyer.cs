@@ -12,7 +12,6 @@ public class Destroyer : MonoBehaviour
     }
     void Update() {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        RotateChainsaw();
         
     }
     public void DestroyerSpeedZero() {
@@ -35,12 +34,4 @@ public class Destroyer : MonoBehaviour
         
     }
         
-
-    void RotateChainsaw() {
-        iTween.RotateBy(chainsaws, iTween.Hash(
-                    "x", 1f,
-                    "speed", 200f,
-                    "easetype", iTween.EaseType.linear
-                ));
-    }
 }

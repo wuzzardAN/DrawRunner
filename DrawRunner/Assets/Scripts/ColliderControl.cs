@@ -44,19 +44,7 @@ public class ColliderControl : MonoBehaviour
             FindObjectOfType<PlayerController>().LevelFailed();
             
         }
-        if (collision.collider.tag == "ChainsawDown") {
-            Debug.Log("Chainsaw Down");
-            Destroy(collision.gameObject);
-            FindObjectOfType<Chainsaw>().MoveChainsawDown();
-                
-        }
-
-        if (collision.collider.tag == "ChainsawForward") {
-            Debug.Log("Chainsaw Forward");
-            Destroy(collision.gameObject);
-            FindObjectOfType<Chainsaw>().MoveChainsawForward();
-                
-        }
+        
 
 
         
