@@ -3527,7 +3527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 919132148546416326}
-  startOffset: {x: 2.61, y: 4.51, z: 8.34}
+  startOffset: {x: 1.64, y: 4.51, z: 8.34}
   smoothSpeed: 6.96
 --- !u!1 &971509958
 GameObject:
@@ -4230,7 +4230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.899994, y: -2.8999634}
+  m_AnchoredPosition: {x: 2.8999023, y: -2.9003906}
   m_SizeDelta: {x: 5.800006, y: 5.800006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1098324319
