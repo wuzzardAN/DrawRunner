@@ -5,8 +5,8 @@ using UnityEngine;
 public class Destroyer : MonoBehaviour
 {
     public GameObject particle;
-    public GameObject chainsaws;
-    public float speed = 0f;
+    public float speed;
+
     void Start() {
         speed = 0f;
     }
@@ -18,7 +18,7 @@ public class Destroyer : MonoBehaviour
         speed = 0f;
     }
     public void DestroyerSpeedUp() {
-        speed = 5f;
+        speed = 3.6f;
     }
 
     void OnCollisionEnter (Collision collision) {

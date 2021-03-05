@@ -18,6 +18,8 @@ public class Draw : MonoBehaviour
 
     #endregion
 
+    public bool isGameRunning = false;
+
     public GameObject m_Cube;
     public float m_DistanceZ;
 
@@ -63,27 +65,30 @@ public class Draw : MonoBehaviour
         progressFillDraw.value = ((float)objectsInScene);
         
     }
+    public void GameRunning() {
+        isGameRunning = true;
+    }
 
-    void DrawScreen() {
-        if (Input.GetMouseButton(0))
-        {
-           
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            
-            
-            float enter = 0.0f;
-
-            if (m_Plane.Raycast(ray, out enter))
+    public void DrawScreen() {
+        if(isGameRunning == true) {
+                if (Input.GetMouseButton(0))
             {
-                GameObject go;
-                Vector3 hitPoint = ray.GetPoint(enter);
-
-                
-                
-                go = Instantiate(m_Cube,hitPoint, Quaternion.identity);
-                go.transform.SetParent(transform);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                float enter = 0.0f;
+                if (m_Plane.Raycast(ray, out enter))
+                {
+                    GameObject go;
+                    Vector3 hitPoint = ray.GetPoint(enter);  
+                    go = Instantiate(m_Cube,hitPoint, Quaternion.identity);
+                    go.transform.SetParent(transform);
+                }
             }
+        } else
+        {
+            return;
         }
+
+        
     }
 
     

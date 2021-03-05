@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     Animator anim;
-    public bool isgrounded;
+
 
     
     void Start() {
@@ -16,9 +16,6 @@ public class PlayerController : MonoBehaviour
 
     void Update() {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        if (isgrounded == true) {
-         
-        }
     }
     
     
