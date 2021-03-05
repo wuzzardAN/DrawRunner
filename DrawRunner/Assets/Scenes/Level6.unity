@@ -1627,8 +1627,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067e8b695de2760488222a2bfca3fe03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1994398237}
-  startOffset: {x: -7.46, y: 4.51, z: 8.34}
+  target: {fileID: 919132148546416326}
+  startOffset: {x: 1.64, y: 4.51, z: 8.34}
   smoothSpeed: 6.96
 --- !u!1 &971509958
 GameObject:
@@ -3518,11 +3518,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1994398237 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4963394317173047466, guid: 119bd26231cd1c149bc494fd1bbbe1df, type: 3}
-  m_PrefabInstance: {fileID: 210529989}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2043632011
 GameObject:
   m_ObjectHideFlags: 0
